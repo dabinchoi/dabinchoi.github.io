@@ -1,17 +1,51 @@
 ---
 layout: post
-title:  "first posting"
+title:  "첫번째 블로그"
 date:   2019-01-06
-excerpt: "Minimal, one column Jekyll theme for your blog."
-project: true
+excerpt: "MathJax Example for Moon Jekyll Theme."
 tag:
-- jekyll 
-- bin
-- blog
-- about
-- theme
+- markdown 
+- example
+- test
+- jekyll
 comments: true
 ---
 
-# 첫 포스팅 입니다 !
-### 2019-01-06 첫포스트
+
+
+## 첫번째 포스팅
+
+To enable MathJax support be sure Kramdown is your Markdown flavor of choice and MathJax is set to true in your `_config.yml` file.
+
+~~~
+markdown: kramdown
+mathjax: true
+~~~
+
+~~~
+Here is an example MathJax inline rendering \\( 1/x^{2} \\), and here is a block rendering: 
+\\[ \frac{1}{n^{2}} \\]
+~~~
+
+Here is an example MathJax inline rendering \\( 1/x^{2} \\), and here is a block rendering: 
+\\[ \frac{1}{n^{2}} \\]
+
+The only thing to look out for is the escaping of the backslash when using markdown, so the delimiters become `\\[ ... \\]` and `\\( ... \\)` for inline and block maths respectively.
+    
+
+$$
+\begin{align*}
+  & \phi(x,y) = \phi \left(\sum_{i=1}^n x_ie_i, \sum_{j=1}^n y_je_j \right)
+  = \sum_{i=1}^n \sum_{j=1}^n x_i y_j \phi(e_i, e_j) = \\
+  & (x_1, \ldots, x_n) \left( \begin{array}{ccc}
+      \phi(e_1, e_1) & \cdots & \phi(e_1, e_n) \\
+      \vdots & \ddots & \vdots \\
+      \phi(e_n, e_1) & \cdots & \phi(e_n, e_n)
+    \end{array} \right)
+  \left( \begin{array}{c}
+      y_1 \\
+      \vdots \\
+      y_n
+    \end{array} \right)
+\end{align*}
+$$
