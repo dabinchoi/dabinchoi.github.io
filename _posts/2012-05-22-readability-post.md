@@ -1,6 +1,6 @@
 ﻿---
 
-layout: pos
+layout: post
 t
 title:  "2019-01-06"
 
